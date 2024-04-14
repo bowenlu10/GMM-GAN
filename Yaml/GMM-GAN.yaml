@@ -1,0 +1,59 @@
+#####
+name: GMM-GAN
+
+run_name: 'GMM-GAN/IXI'
+#run_name: 'GMM-GAN/BraTS2015'
+#run_name: 'GMM-GAN/OASIS3'
+
+save_root: '/checkpoints/'
+image_save: '/results/'
+
+data: IXI
+#data: BrainTs2015
+#data: OASIS3
+
+epoch: 0        # starting epoch
+n_epochs: 120       # How often do you want to display output images during training
+batchSize: 16
+# size of the batches
+#batchSize_un: 4
+
+##########IXI###########
+val_dataroot: 'datasets/ixi/val'
+
+# BrainTs2015
+#val_dataroot: 'datasets/BrainTs2015/val'
+
+#########OASIS3###########
+#val_dataroot: 'datasets/OASIS3/val'
+
+
+
+g_lr: 0.0002                   # initial learning rate
+r_lr: 0.0002
+decay_epoch: 60            # epoch to start linearly decaying the learning rate to 0
+size: 256               # size of the data crop
+input_nc: 3
+output_nc: 3
+cuda: True
+n_cpu: 6
+
+# mine
+val_batchSize: 1
+
+# Manifold-Matching
+latent_embedding: 500
+out_dim: 128     # ML network output dim
+margin: 1.4     # triplet loss margin
+alpha: 0.03     # triplet loss direction guidance weight parameter
+ml_lr: 0.0002
+
+not_pretrained: False
+arch: 'not_frozen_normalize'    # 'frozen_normalize'---Frozen denotes that exisiting pretrained batchnorm layers are frozen, and normalize denotes normalization of the output embedding.'
+
+
+# weight of loss
+lambda_mm: 1
+lambda_img: 20  # 20.0
+lambda_percp: 1   # 0.5
+

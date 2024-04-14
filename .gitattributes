@@ -1,0 +1,4 @@
+checkpoints/IXI/netG_A2B.pth filter=lfs diff=lfs merge=lfs -text
+checkpoints/BraTS2015/netG_A2B.pth filter=lfs diff=lfs merge=lfs -text
+checkpoints/OASIS3/netG_A2B.pth filter=lfs diff=lfs merge=lfs -text
+netG_A2B.pth filter=lfs diff=lfs merge=lfs -text
