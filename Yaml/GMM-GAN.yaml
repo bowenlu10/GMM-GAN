@@ -18,13 +18,13 @@ batchSize: 16
 
 
 ##########IXI###########
-val_dataroot: 'datasets/ixi/val'
+val_dataroot: 'data/ixi/val'
 
 # BrainTs2015
-#val_dataroot: 'datasets/BrainTs2015/val'
+#val_dataroot: 'data/BrainTs2015/val'
 
 #########OASIS3###########
-#val_dataroot: 'datasets/OASIS3/val'
+#val_dataroot: 'data/OASIS3/val'
 
 
 
