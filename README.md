@@ -1,7 +1,3 @@
-# GMM-GAN
-***
-
-
 # Environment
 ***
 1. python = 3.9.10
